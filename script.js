@@ -28,7 +28,7 @@ var hourof15 = 15
 var hourof16 = 16
 var hourof17 = 17
 
-var hours = [hourof9, hourof10, hourof11, hourof12, hourof13, hourof14, hourof16, hourof17]
+var hours = [hourof9, hourof10, hourof11, hourof12, hourof13, hourof14, hourof15, hourof16,hourof17]
 
 function changeColor(i, id) {
 
@@ -50,6 +50,7 @@ changeColor(5, hourof14El)
 changeColor(6, hourof15El)
 changeColor(7, hourof16El)
 changeColor(8, hourof17El)
+changeColor(9, hourof18El)
 
 
 
@@ -180,7 +181,6 @@ changeColor(8, hourof17El)
 //     }
 // }
 // timecheck()
-
 
 
 // var date = moment("2013-03-24")
