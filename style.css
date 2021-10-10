@@ -1,6 +1,6 @@
 body {
     box-sizing: border-box;
-    background-color: #34678E;
+    background-color: #e0dcc3;
 }
 
 main {
@@ -30,7 +30,7 @@ header {
 
 
 
-#textbutton {
+.textbutton {
     color: #000000;
     background-color: #00C49A;
     border: 1px solid #b4ffef;
@@ -38,29 +38,21 @@ header {
     border-radius: 0px 10px 10px 0px;
 
 }
-
+.textbutton:hover{
+    background-color: #b4ffef;
+}
 #presenttime {
     display: flex;
-    border-bottom: 3px solid #7f9172;
+    border-top: 3px solid #7f9172;
     color: #fff;
     justify-content: right;
+    /* transform: rotate(-20deg); */
 }
 
 .textarea {
     border: 1px solid #7F9172;
-    height: 50px;
+    min-height: 55px;
     background-color: #ffffff;
 
 }
 
-.pasttime {
-
-    background-color: #d3cfcf;
-}
-.presenttime {
-
-    background-color: #bfffb6;
-}
-.futuretime{
-    background-color: #fffab0;
-}

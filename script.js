@@ -12,12 +12,21 @@ var hourof14El = document.querySelector('#hour14');
 var hourof15El = document.querySelector('#hour15');
 var hourof16El = document.querySelector('#hour16');
 var hourof17El = document.querySelector('#hour17');
+var textbutton9El = document.querySelector('#textbutton9')
+var textbutton10El = document.querySelector('#textbutton10')
+var textbutton11El = document.querySelector('#textbutton11')
+var textbutton12El = document.querySelector('#textbutton12')
+var textbutton13El = document.querySelector('#textbutton13')
+var textbutton14El = document.querySelector('#textbutton14')
+var textbutton15El = document.querySelector('#textbutton15')
+var textbutton16El = document.querySelector('#textbutton16')
+var textbutton17El = document.querySelector('#textbutton17')
 
 const todaytime = moment()
 nowtimeEl.textContent = todaytime.format("MMMM Do YYYY, h:mm a");
-// var now = moment().hours()
-var now = 15
+var now = 12
 
+//moment().hours()
 var hourof9 = 9
 var hourof10 = 10
 var hourof11 = 11
@@ -28,17 +37,32 @@ var hourof15 = 15
 var hourof16 = 16
 var hourof17 = 17
 
-var hours = [hourof9, hourof10, hourof11, hourof12, hourof13, hourof14, hourof15, hourof16,hourof17]
+var hours = [hourof9, hourof10, hourof11, hourof12, hourof13, hourof14, hourof15, hourof16, hourof17]
 
 function changeColor(i, id) {
 
     if (hours[i] < now) {
-        id.style.backgroundColor = '#d3cfcf'
+        id.style.backgroundColor = '#d3cfcf';
+        id.readOnly = true;
+
     } else if (hours[i] == now) {
         id.style.backgroundColor = '#bfffb6'
     } else {
         id.style.backgroundColor = '#fffab0'
     }
+}
+
+function storedata() {
+
+    localStorage.setItem("textbutton9", hourof9El.value);
+    localStorage.setItem("textbutton10", hourof10El.value);
+    localStorage.setItem("textbutton11", hourof11El.value);
+    localStorage.setItem("textbutton12", hourof12El.value);
+    localStorage.setItem("textbutton13", hourof13El.value);
+    localStorage.setItem("textbutton14", hourof14El.value);
+    localStorage.setItem("textbutton15", hourof15El.value);
+    localStorage.setItem("textbutton16", hourof16El.value);
+    localStorage.setItem("textbutton17", hourof17El.value);
 }
 
 changeColor(0, hourof9El)
@@ -50,7 +74,31 @@ changeColor(5, hourof14El)
 changeColor(6, hourof15El)
 changeColor(7, hourof16El)
 changeColor(8, hourof17El)
-changeColor(9, hourof18El)
+
+
+textbutton9El.addEventListener("click", storedata)
+textbutton10El.addEventListener("click", storedata)
+textbutton11El.addEventListener("click", storedata)
+textbutton12El.addEventListener("click", storedata)
+textbutton13El.addEventListener("click", storedata)
+textbutton14El.addEventListener("click", storedata)
+textbutton15El.addEventListener("click", storedata)
+textbutton16El.addEventListener("click", storedata)
+textbutton17El.addEventListener("click", storedata)
+
+
+hourof9El.innerHTML = localStorage.getItem("textbutton9")
+hourof10El.innerHTML = localStorage.getItem("textbutton10")
+hourof11El.innerHTML = localStorage.getItem("textbutton11")
+hourof12El.innerHTML = localStorage.getItem("textbutton12")
+hourof13El.innerHTML = localStorage.getItem("textbutton13")
+hourof14El.innerHTML = localStorage.getItem("textbutton14")
+hourof15El.innerHTML = localStorage.getItem("textbutton15")
+hourof16El.innerHTML = localStorage.getItem("textbutton16")
+hourof17El.innerHTML = localStorage.getItem("textbutton17")
+
+
+
 
 
 
