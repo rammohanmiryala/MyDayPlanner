@@ -25,7 +25,8 @@ var textbutton17El = document.querySelector('#textbutton17')
 const todaytime = moment()
 nowtimeEl.textContent = todaytime.format("MMMM Do YYYY, h:mm a");
 //check today time in hrs 
-var now = moment().hours()
+var now = 15
+//moment().hours()
 //assign values to the variable for comparison
 var hourof9 = 9
 var hourof10 = 10
