@@ -21,12 +21,12 @@ var textbutton14El = document.querySelector('#textbutton14')
 var textbutton15El = document.querySelector('#textbutton15')
 var textbutton16El = document.querySelector('#textbutton16')
 var textbutton17El = document.querySelector('#textbutton17')
-
+//check today time and date
 const todaytime = moment()
 nowtimeEl.textContent = todaytime.format("MMMM Do YYYY, h:mm a");
-var now = 12
-
-//moment().hours()
+//check today time in hrs 
+var now = moment().hours()
+//assign values to the variable for comparison
 var hourof9 = 9
 var hourof10 = 10
 var hourof11 = 11
@@ -38,7 +38,7 @@ var hourof16 = 16
 var hourof17 = 17
 
 var hours = [hourof9, hourof10, hourof11, hourof12, hourof13, hourof14, hourof15, hourof16, hourof17]
-
+//to check present past and future time
 function changeColor(i, id) {
 
     if (hours[i] < now) {
@@ -51,7 +51,7 @@ function changeColor(i, id) {
         id.style.backgroundColor = '#fffab0'
     }
 }
-
+//store the textarea text in logalstorage
 function storedata() {
 
     localStorage.setItem("textbutton9", hourof9El.value);
@@ -75,7 +75,7 @@ changeColor(6, hourof15El)
 changeColor(7, hourof16El)
 changeColor(8, hourof17El)
 
-
+//onclick store variables entered in textarea
 textbutton9El.addEventListener("click", storedata)
 textbutton10El.addEventListener("click", storedata)
 textbutton11El.addEventListener("click", storedata)
@@ -86,7 +86,7 @@ textbutton15El.addEventListener("click", storedata)
 textbutton16El.addEventListener("click", storedata)
 textbutton17El.addEventListener("click", storedata)
 
-
+//on relode display the stored variables
 hourof9El.innerHTML = localStorage.getItem("textbutton9")
 hourof10El.innerHTML = localStorage.getItem("textbutton10")
 hourof11El.innerHTML = localStorage.getItem("textbutton11")
