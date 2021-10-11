@@ -11,17 +11,16 @@ On clicking the push button, the to-do list is stored in local storage, and when
 - css
 - java script
 
-## functionality
-
--
+## functionality 
+- user need to click on the button to store to-do list 
 
 ## Development process
 
-HTML and CSS pages are created
-added styling
-added comments to HTML and CSS
-worked on past, present, and future time change using JavaScript
-worked on added data to local storage
+- HTML and CSS pages are created
+- added styling
+- added comments to HTML and CSS
+- worked on past, present, and future time change using JavaScript
+- worked on added data to local storage
 
 ## The following appearance of the site:
 
